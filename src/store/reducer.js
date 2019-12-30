@@ -8,6 +8,21 @@ const reducer = (state = initialState , action) => {
             counter : state.counter + 1
         }
     }
+    if(action.type === 'DECREMENT'){
+        return {
+            counter : state.counter -1
+        }
+    }
+    if(action.type === 'ADD_VALUE'){
+        return{
+            counter : state.counter + 5
+        }
+    }
+    if(action.type === 'DECREMENT_VALUE'){
+        return {
+            counter : state.counter - 5
+        }
+    }
     return state;
 };
 
